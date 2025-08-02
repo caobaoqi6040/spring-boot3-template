@@ -8,7 +8,7 @@
         "EditorConfig.EditorConfig",
         "k--kato.intellij-idea-keybindings",
         "ms-azuretools.vscode-docker",
-        "ms-python.python",
-        "Vue.volar"
+        "vscjava.vscode-java-pack",
+        "vmware.vscode-boot-dev-pack"
     ]
 }
