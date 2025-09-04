@@ -4,3 +4,26 @@ logging:
   level:
     root: info
     web: debug
+spring:
+  data:
+    redis:
+      host: localhost
+      port: 6379
+      database: 0
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/backend
+    username: root
+    password: root
+  flyway:
+    baseline-on-migrate: true
+    baseline-version: 0
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+    map-underscore-to-camel-case: true
+  global-config:
+    db-config:
+      logic-delete-field: deleted
+      logic-delete-value: 1
+      logic-not-delete-value: 0
