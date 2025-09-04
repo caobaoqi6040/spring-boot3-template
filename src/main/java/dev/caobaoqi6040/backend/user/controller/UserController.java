@@ -1,9 +1,10 @@
 package dev.caobaoqi6040.backend.user.controller;
 
-import dev.caobaoqi6040.backend.user.exception.UserNotFoundException;
 import dev.caobaoqi6040.backend.user.domain.UserStruct;
 import dev.caobaoqi6040.backend.user.domain.response.UserInfoVo;
+import dev.caobaoqi6040.backend.user.exception.UserNotFoundException;
 import dev.caobaoqi6040.backend.user.service.UserService;
+import org.mapstruct.factory.Mappers;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -23,9 +24,9 @@ public class UserController {
 	private final UserService service;
 	private final UserStruct struct;
 
-	public UserController(UserService service, UserStruct struct) {
+	public UserController(UserService service) {
 		this.service = service;
-		this.struct = struct;
+		this.struct = Mappers.getMapper(UserStruct.class);
 	}
 
 	@GetMapping
