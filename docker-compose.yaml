@@ -20,6 +20,20 @@ services:
       TZ: Asia/Shanghai
       MYSQL_ROOT_PASSWORD: root
       MYSQL_DATABASE: backend
+  minio:
+    image: minio/minio:RELEASE.2024-08-03T04-33-23Z.fips
+    restart: "no"
+    ports:
+      - "9000:9000"
+      - "9090:9090"
+    environment:
+      TZ: Asia/Shanghai
+      MINIO_ACCESS_KEY: minio
+      MINIO_SECRET_KEY: minio-pwd
+    command: server /data --console-address ":9000" --address ":9090"
+    volumes:
+      - minio_data:/data
 volumes:
   redis_data:
   mysql_data:
+  minio_data:
