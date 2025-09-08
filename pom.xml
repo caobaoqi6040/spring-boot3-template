@@ -6,7 +6,7 @@
   <parent>
     <groupId>org.springframework.boot</groupId>
     <artifactId>spring-boot-starter-parent</artifactId>
-    <version>3.5.0</version>
+    <version>3.5.4</version>
     <relativePath/> <!-- lookup parent from repository -->
   </parent>
 
@@ -21,6 +21,17 @@
   </properties>
 
   <dependencies>
+    <!--oss-->
+    <dependency>
+      <groupId>org.dromara.x-file-storage</groupId>
+      <artifactId>x-file-storage-spring</artifactId>
+      <version>2.3.0</version>
+    </dependency>
+    <dependency>
+      <groupId>io.minio</groupId>
+      <artifactId>minio</artifactId>
+      <version>8.5.2</version>
+    </dependency>
     <!--web-->
     <dependency>
       <groupId>org.springframework.boot</groupId>
@@ -75,6 +86,11 @@
       <artifactId>flyway-core</artifactId>
     </dependency>
     <!--dev tools-->
+    <dependency>
+      <groupId>cn.hutool</groupId>
+      <artifactId>hutool-all</artifactId>
+      <version>5.8.39</version>
+    </dependency>
     <dependency>
       <groupId>net.datafaker</groupId>
       <artifactId>datafaker</artifactId>

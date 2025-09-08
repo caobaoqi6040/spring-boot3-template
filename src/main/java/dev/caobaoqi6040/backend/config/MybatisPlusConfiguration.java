@@ -8,7 +8,6 @@ import com.baomidou.mybatisplus.extension.plugins.inner.OptimisticLockerInnerInt
 import com.baomidou.mybatisplus.extension.plugins.inner.PaginationInnerInterceptor;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.ibatis.reflection.MetaObject;
-import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -16,7 +15,6 @@ import java.time.LocalDateTime;
 
 @Slf4j
 @Configuration
-@MapperScan("dev.caobaoqi6040.backend.*.mapper")
 public class MybatisPlusConfiguration implements MetaObjectHandler {
 
 	@Override

@@ -40,3 +40,16 @@ decorator:
   datasource:
     p6spy:
       log-format: "\ntime: %(executionTime) || sql: %(sql)\n"
+dromara:
+  x-file-storage:
+    default-platform: minio-1
+    thumbnail-suffix: ".min.jpg"
+    minio:
+      - platform: minio-1
+        enable-storage: true
+        access-key: XNKXOHIYjzG9Ef7JGzjC
+        secret-key: WKvXFyPuAMGmPtSpiu6Y2XFLg3bpEmwK6pIhKyMV
+        end-point: http://127.0.0.1:9090/
+        bucket-name: spring-boot3-template
+        domain: http://127.0.0.1:9090/spring-boot3-template
+        base-path: /
