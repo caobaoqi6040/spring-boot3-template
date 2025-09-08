@@ -1,4 +1,4 @@
-CREATE TABLE tb_user
+CREATE TABLE sys_user
 (
   id          BIGINT                  NOT NULL COMMENT 'id',
   username    VARCHAR(255)            NOT NULL COMMENT '用户名',
@@ -12,5 +12,5 @@ CREATE TABLE tb_user
   CONSTRAINT `PRIMARY` PRIMARY KEY (id)
 ) COMMENT ='用户表';
 
-ALTER TABLE tb_user
-  ADD CONSTRAINT tb_user_id_email_uindex UNIQUE (id, email);
+ALTER TABLE sys_user
+  ADD CONSTRAINT sys_user_id_email_uindex UNIQUE (id, email);

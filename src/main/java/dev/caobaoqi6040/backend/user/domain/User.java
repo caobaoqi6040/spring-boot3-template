@@ -20,7 +20,7 @@ import java.time.LocalDateTime;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-@TableName(value = "`tb_user`")
+@TableName(value = "`sys_user`")
 public class User implements Serializable {
 
 	@Serial
